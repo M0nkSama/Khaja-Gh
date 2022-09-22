@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('pid');
             $table->string('pname');
             $table->integer('pp');
+            $table->string('pimage');
+            $table->integer('quantity')->default(1);
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }

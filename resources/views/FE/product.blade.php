@@ -27,7 +27,12 @@ $user=auth()->user();
             <div class="d-flex justify-content-between">
               <div>
                 <p><a href="#!" class="text-dark">{{$posts->name}}</a></p>
+
+                
+                
                 <p class="small text-muted">{{$posts->desc}}</p><span>Rs.{{$posts->price}}<span>
+                 
+                 
                 </div>
             </div>
           </div>
@@ -39,14 +44,15 @@ $user=auth()->user();
 
               <form action="/store" method="POST">
                 @CSRF
-               
+              <input  name="quantity" type="number" min="1" max="10" value=1>  
+              </br></br>
                 
                   <input type="text" name="uid" value="{{$user->id}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
                   <input type="text" name="uname" value="{{$user->name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
                   <input type="text" name="pid" value="{{$posts->id}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
                   <input type="text" name="pname" value="{{$posts->name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
                   <input type="text" name="pp" value="{{$posts->price}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
-                 
+                  <input type="text" name="pimage" value="{{$posts->image}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" hidden>
                 <button type="submit" class="btn btn-primary">Order Now</button>
               </form>  
             </div>

@@ -13,10 +13,11 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>#S</th>
                                     <th>Name</th>
+                                    <th>Quantity</th>
                                     <th>User name</th>
-                                    <th>Price</th>
+                                    <th>Total Price</th>
                                      <th>Actions</th>
                                 </tr>
                             </thead>
@@ -25,8 +26,9 @@
                                 <tr>
                                     <td>{{ $item->pid }}</td>
                                     <td>{{ $item->pname }}</td>
+                                    <td>{{$item->quantity}}</td>
                                     <td>{{ $item->uname }}</td>
-                                    <td>{{ $item->pp}}</td>
+                                    <td>Rs.{{$item->pp * $item->quantity}}</td>
                                     
                                     <td>
                                        <form method="POST" action="{{ url('/admin/order' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">

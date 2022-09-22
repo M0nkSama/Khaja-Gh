@@ -27,7 +27,7 @@ class OrderController extends Controller
             'pid' => 'required',
             'pname' => 'required',
             'pp' => 'required',
-            
+            'quantity'=>'required'
         ]);
 
         $posts = new Order();
@@ -37,6 +37,9 @@ class OrderController extends Controller
         $posts->pid = $request->pid;
         $posts->pname = $request->pname;
         $posts->pp = $request->pp;
+        $posts->quantity = $request->quantity;
+        $posts ->pimage = $request->pimage;
+        
         $posts->save();
 
       

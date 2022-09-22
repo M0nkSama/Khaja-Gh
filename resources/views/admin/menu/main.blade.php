@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('content')
-<div class="container" >
+<div class="container" style="overflow-y: scroll; height:100vh;" >
     <div class="row">
         <div class="col-md-9">
             <div class="card" style="width:1225px;">

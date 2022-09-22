@@ -42,8 +42,8 @@
         @else
  
         @if($auth['role']=='2')
-        <li class="nav-item" >
-          <a class="nav-link" href="/admin/order">
+        <li class="nav-item"  style="list-style-type: none">
+          <a class="nav-link" style="text-decoration:none; color:black " href="/admin/order">
             <i class="fa fa-lock" style="color:red">
               
             </i>
@@ -59,7 +59,7 @@
         
     <div >
       @auth
-                   <li class="nav-item dropdown">
+                   <li class="nav-item dropdown" style="list-style-type: none">
                 <a class="nav-link dropdown-toggle" style="text-decoration:none; color:black "  href="{{ url('/') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{$auth->name}}
                 </a>

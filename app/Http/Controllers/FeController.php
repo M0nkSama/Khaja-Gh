@@ -45,11 +45,14 @@ class FeController extends Controller
      {
          
         $user = Auth::id();
+
+        
          $posts = Order::where('uid',$user)->get();
         $total = 0;
         foreach ($posts as $price ) {
-            $total = $total + $price->pp;
+            $total = $total + ($price->pp * $price->quantity);
         }
+       
         
          return view('FE.order',compact('posts','total'));
      }
